@@ -1,13 +1,22 @@
 <nav class="navbar">
-  <div class="logo">
-    <img src="assets/images/Sephia.png" alt="Sephia logo">
+  <a routerLink="" class="logo">
+    <img src="assets/images/sephiaFP.jpeg" alt="Sephia logo">
     <span>Sephia</span>
-  </div>
+  </a>
 
   <ul class="nav-links">
     <li><a routerLink="">Inicio</a></li>
-    <li><a routerLink="/dron">Dron</a></li>
-    <li><a routerLink="/datos">Datos</a></li>
-    <li><a routerLink="/agricultura">Agricultura Urbana</a></li>
+
+    <li class="dropdown">
+      <a href="#">Proyectos ▾</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/dron">Dron</a></li>
+        <li><a routerLink="/datos">Datos</a></li>
+        <li><a routerLink="/agricultura">Agricultura</a></li>
+        <li><a routerLink="/burrito">Burrito</a></li>
+        <li><a routerLink="/fertirriego">Fertirriego</a></li>
+        <li><a routerLink="/caja">Caja</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>

@@ -1,0 +1,40 @@
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu oculto */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #282324;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 5px;
+}
+
+/* Items */
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu a {
+  color: #0E6100;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover */
+.dropdown-menu a:hover {
+  background-color: #262122;
+  color: #356026;
+}
+
+/* Mostrar dropdown al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
