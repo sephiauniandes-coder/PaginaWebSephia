@@ -1,6 +1,59 @@
-# Pagina Web Sephia
-### Pagina Web de la iniciativa estudiantil SEPHIA de la universidad de los Andes
+# Sephia
 
-SEPHIA es una iniciativa estudiantil que conecta la robótica, la inteligencia artificial, el machine learning y el Internet de las Cosas (IoT) con los desafíos reales de la agricultura colombiana. Nuestra misión es crear un espacio donde estudiantes apasionados por la tecnología puedan diseñar, prototipar y experimentar con sistemas inteligentes que transformen la forma en que cultivamos, regamos, cosechamos y tomamos decisiones en el agro. SEPHIA se proyecta como un referente nacional en el desarrollo de tecnologías aplicadas al agro dentro del entorno universitario. 
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
-A futuro, aspiramos a consolidarnos como un semillero de investigación interdisciplinario, generador de proyectos con impacto real en el sector agrícola colombiano. Visualizamos una red activa de estudiantes, docentes y aliados estratégicos que colaboran para transformar la agricultura tradicional en una industria más tecnológica, conectada y sostenible. 
+## Development server
+
+To start a local development server, run:
+
+```bash
+ng serve
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

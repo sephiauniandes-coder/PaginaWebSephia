@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #262122;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #356026;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0E6100;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #356026;
+}
