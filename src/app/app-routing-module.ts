@@ -8,9 +8,20 @@ import { Agriculturaurbana } from './projects/agriculturaurbana/agriculturaurban
 import { Burrito } from './projects/burrito/burrito';
 import { Fertirriego } from './projects/fertirriego/fertirriego';
 import { Caja } from './projects/caja/caja';
+import { Historia } from './components/historia/historia';
+import { Equipo } from './components/equipo/equipo';
+import { Noticias } from './components/noticias/noticias';
+import { Contacto } from './components/contacto/contacto';
+
 
 const routes: Routes = [
-  { path: '', component: Home }, // 👈 HOME
+  { path: '', component: Home }, 
+  { path: 'historia', component: Historia },
+  { path: 'equipo', component: Equipo },
+  { path: 'noticias', component: Noticias },
+  { path: 'contacto', component: Contacto },
+
+
   { path: 'dron', component: Dron },
   { path: 'datos', component: Datos },
   { path: 'agricultura', component: Agriculturaurbana },

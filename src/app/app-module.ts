@@ -11,6 +11,10 @@ import { Burrito } from './projects/burrito/burrito';
 import { Fertirriego } from './projects/fertirriego/fertirriego';
 import { Caja } from './projects/caja/caja';
 import { Home } from './components/home/home';
+import { Historia } from './components/historia/historia';
+import { Equipo } from './components/equipo/equipo';
+import { Noticias } from './components/noticias/noticias';
+import { Contacto } from './components/contacto/contacto';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { Home } from './components/home/home';
     Burrito,
     Fertirriego,
     Caja,
-    Home
+    Home,
+    Historia,
+    Equipo,
+    Noticias,
+    Contacto
   ],
   imports: [
     BrowserModule,
