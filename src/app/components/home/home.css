@@ -78,3 +78,166 @@
   background-color: #00a844;
   transform: translateY(-2px);
 }
+
+
+#aplicar {
+  background-color: #262122; /* gris oscuro principal */
+  color: #f5f5f5; /* texto claro para contraste */
+
+  padding: 40px;
+  border-radius: 12px;
+
+  max-width: 800px;
+  margin: 40px auto;
+
+  text-align: center;
+}
+
+#aplicar p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.btn-aplicar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+
+  background-color: #0E6100;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+
+  transition: background-color 0.3s ease;
+}
+
+.btn-aplicar:hover {
+  background-color: #356026;
+}
+
+.carousel-container {
+  padding: 20px 40px;
+  background-color: #262122;
+  color: white;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* grande tipo hero */
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* slide activo */
+.slide.active {
+  opacity: 1;
+}
+
+/* flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+.footer {
+  background:  #262122; /* gris oscuro base */
+  color: #ffffff;
+
+  width: 100%;
+  padding: 60px 40px 30px;
+
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* contenedor interno */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* secciones */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #356026; /* verde elegante */
+}
+
+.footer-section p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #dddddd;
+}
+
+/* links */
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #0E6100; /* verde fuerte */
+}
+
+/* parte inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+
+  border-top: 1px solid #0E6100;
+  font-size: 14px;
+  color: #aaaaaa;
+}

@@ -1,9 +1,26 @@
 <div class="home-container">
 
-  <!-- Imagen superior -->
-  <div class="hero-image">
-    <img src="assets/images/Hidroponia.jpeg" alt="Imagen principal">
+<div class="carousel-wrapper">
+  
+  <button class="arrow left" (click)="prev()">❮</button>
+
+  <div class="carousel">
+    <div 
+      class="slide" 
+      *ngFor="let img of images; let i = index"
+      [class.active]="i === currentIndex"
+    >
+      <img [src]="img">
+    </div>
   </div>
+
+  <button class="arrow right" (click)="next()">❯</button>
+
+</div>
+
+
+  <!-- Imagen superior -->
+  
 
   <!-- Texto central -->
   <div class="home-text">
@@ -25,6 +42,9 @@
     <p>
       Todo esto converge en un elemento clave: los datos. A través de su análisis, no solo buscamos entender mejor los cultivos, sino también abrir nuevas oportunidades de colaboración e innovación en el sector agrícola.
     </p>
+  </div>
+  <div class="hero-image">
+    <img src="assets/images/Hidroponia.jpeg" alt="Imagen principal">
   </div>
 
   <div class="home-text">
@@ -52,3 +72,37 @@ Explora, descubre y conoce cómo estamos llevando la ingeniería más allá del 
     Aplicar ahora
   </a>
 </div>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>SEPHIA</h3>
+      <p>Innovación en tecnología aplicada a la agricultura y el análisis de datos.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p>Email: contacto@sephia.com</p>
+      <p>Tel: +57 300 000 0000</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Redes</h4>
+      <p><a href="https://www.instagram.com/sephiauniandes/">Instagram</a></p>
+      <p><a href="#">LinkedIn</a></p>
+      <p><a href="#">GitHub</a></p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Explora</h4>
+      <p><a href="#">Proyectos</a></p>
+      <p><a href="#">Equipo</a></p>
+      <p><a href="#">Contacto</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 SEPHIA</p>
+  </div>
+</footer>
