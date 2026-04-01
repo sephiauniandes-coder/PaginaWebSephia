@@ -1,2 +1,55 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>SEPHIA</h3>
+      <p>Innovación en tecnología aplicada a la agricultura y el análisis de datos.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p>Email: sephia@uniandes.edu.co</p>
+      <p>Tel: +57 300 000 0000</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Redes</h4>
+      <p><a href="https://www.instagram.com/sephiauniandes/" target="_blank">Instagram</a></p>
+      <p><a href="https://www.linkedin.com/in/sephia-uniandes-18687a3a8" target="_blank">LinkedIn</a></p>
+      <p><a href="https://github.com/sephiauniandes-coder" target="_blank">GitHub</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Explora</h4>
+      <p><a routerLink="/burrito">Proyectos</a></p>
+      <p><a routerLink="/equipo">Equipo</a></p>
+      <p><a routerLink="/contacto">Contacto</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 SEPHIA</p>
+  </div>
+</footer>
+
+<!-- Lightbox global -->
+<div class="lightbox-overlay" *ngIf="lightbox.isOpen" (click)="lightbox.close()">
+  <button class="lightbox-close" (click)="lightbox.close()">✕</button>
+  <button class="lightbox-arrow lightbox-prev" (click)="onPrev($event)">❮</button>
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <img [src]="lightbox.images[lightbox.currentIndex]" alt="Imagen ampliada">
+  </div>
+  <button class="lightbox-arrow lightbox-next" (click)="onNext($event)">❯</button>
+  <div class="lightbox-dots" (click)="$event.stopPropagation()">
+    <span
+      *ngFor="let img of lightbox.images; let i = index"
+      class="lightbox-dot"
+      [class.active]="i === lightbox.currentIndex"
+      (click)="lightbox.goTo(i)"
+    ></span>
+  </div>
+  <div class="lightbox-counter">{{ lightbox.currentIndex + 1 }} / {{ lightbox.images.length }}</div>
+</div>

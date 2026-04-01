@@ -1,1 +1,69 @@
-<p>historia works!</p>
+<div class="historia-container">
+
+  <section class="historia-section">
+    <h1>Nuestra Historia</h1>
+    <div class="historia-hero">
+      <img src="assets/images/LogoSephia.jpeg" alt="SEPHIA">
+    </div>
+  </section>
+
+  <section class="historia-section">
+    <h2>Misión</h2>
+    <p>
+      SEPHIA es una iniciativa estudiantil que conecta diversas ramas de la ingeniería y ciencia con los desafíos reales de la agricultura colombiana. Nuestra misión es crear un espacio donde estudiantes apasionados por la tecnología puedan diseñar, prototipar y experimentar con sistemas inteligentes que transformen la forma en que cultivamos, regamos, cosechamos y tomamos decisiones en el agro colombiano.
+    </p>
+  </section>
+
+  <section class="historia-section">
+    <h2>Visión</h2>
+    <p>
+      SEPHIA se proyecta como un referente nacional en el desarrollo de tecnologías aplicadas al agro dentro del entorno universitario. En el futuro, aspiramos a consolidarnos como un semillero de investigación interdisciplinario, generador de proyectos con impacto real en el sector agrícola colombiano. Visualizamos una red activa de estudiantes, docentes y aliados estratégicos que colaboran para transformar la agricultura tradicional en una industria más tecnológica, conectada y sustentable.
+    </p>
+  </section>
+
+  <section class="historia-section">
+    <h2>Fundación e historia</h2>
+    <p>
+      SEPHIA nace del interés de dos estudiantes de Ingeniería Mecánica por conformar una iniciativa estudiantil con alto potencial de impacto en la industria colombiana. Inspirados por un estudiante de Administración y motivados por la cercanía de sus familias al sector agrícola, identifican una oportunidad de innovación en esta área poco explorada desde la academia en Colombia.
+    </p>
+    <p>
+      Conscientes de la capacidad investigativa y del liderazgo que ejerce la Universidad de los Andes en el ámbito nacional, plantean como hipótesis central que es posible impulsar el desarrollo tecnológico del sector agrícola mediante investigación y la implementación de soluciones de automatización.
+    </p>
+    <p>
+      En el proceso de formación de la iniciativa, los fundadores se acercan a profesores y estudiantes con experiencia en robótica y aprendizaje automático. A través de estas conversaciones conocen el "Agrolab" y el invernadero del Departamento de Ingeniería Mecánica, lo cual abre la posibilidad de crear un espacio experimental para automatizar un pequeño cultivo.
+    </p>
+    <p>
+      Con este respaldo, SEPHIA comienza integrando estudiantes interesados en las tecnologías aplicadas al agro, con el objetivo inicial de desarrollar un cultivo eficiente y autónomo, capaz de sensar variables relevantes para su mantenimiento y optimización. A futuro, se proyecta avanzar hacia soluciones más sofisticadas, como sistemas de recolección y poda inteligentes basados en algoritmos de aprendizaje automático y reconocimiento de imágenes.
+    </p>
+    <p>
+      En una primera etapa, el enfoque se centra en el cultivo de arándano, una planta de creciente relevancia en Colombia. Se busca estudiar cómo la técnica de poda afecta el desarrollo de la planta, con el propósito de diseñar un modelo que permita optimizar este proceso y, en consecuencia, maximizar el rendimiento de la cosecha.
+    </p>
+  </section>
+
+  <section class="historia-section motivacion">
+    <h2>Motivación</h2>
+    <p>
+      SEPHIA nace de la motivación de contribuir a un sistema alimentario más justo, sostenible y eficiente. La iniciativa busca desarrollar tecnologías que permitan producir alimentos de manera inteligente, con el objetivo de poder abastecer especialmente a aquellas regiones donde el acceso a la comida es más limitado y donde el hambre sigue siendo una realidad.
+    </p>
+    <p>
+      Al mismo tiempo, SEPHIA está impulsada por el compromiso de cuidar el planeta, promoviendo prácticas agrícolas que utilicen los recursos de forma más eficiente, reduzcan el desperdicio y eviten la saturación y degradación del suelo. A través de la integración de tecnología, datos y agricultura, el proyecto busca avanzar hacia una producción de alimentos que no solo sea más productiva, sino también más responsable con el medio ambiente y con las comunidades que más lo necesitan.
+    </p>
+    <div class="motivacion-img">
+      <img src="assets/images/Motivacion.png" alt="Prevalencia de inseguridad alimentaria en Colombia, 2024">
+      <p class="img-caption">Prevalencia de la inseguridad alimentaria moderada o grave en hogares (%) — Total departamentos, 2024. Fuente: DANE</p>
+    </div>
+  </section>
+
+  <section class="historia-section galeria">
+    <h2>Galería</h2>
+    <div class="galeria-grid">
+      <img
+        *ngFor="let img of galeriaImages; let i = index"
+        [src]="img"
+        alt="Galería SEPHIA"
+        (click)="openGaleria(i)"
+      >
+    </div>
+  </section>
+
+</div>
