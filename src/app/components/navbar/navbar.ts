@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
+
 @Component({
   selector: 'app-navbar',
   standalone: false,
@@ -8,5 +7,26 @@ import { ViewportScroller } from '@angular/common';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+  menuOpen = false;
+  projectsOpen = false;
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+
+    if (!this.menuOpen) {
+      this.projectsOpen = false;
+    }
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+    this.projectsOpen = false;
+  }
+
+  toggleProjects(event: Event) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      event.preventDefault();
+      this.projectsOpen = !this.projectsOpen;
+    }
+  }
 }

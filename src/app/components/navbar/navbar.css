@@ -1,60 +1,10 @@
-/* Dropdown container */
-.dropdown {
-  position: relative;
+/* Hamburger active animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-
-/* Dropdown menu oculto */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #282324;
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  display: none;
-  min-width: 150px;
-  border-radius: 5px;
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
 }
-
-/* Items */
-.dropdown-menu li {
-  padding: 8px 20px;
-}
-
-.dropdown-menu a {
-  color: #0E6100;
-  text-decoration: none;
-  display: block;
-}
-
-/* Hover */
-.dropdown-menu a:hover {
-  background-color: #262122;
-  color: #ffffff;
-}
-
-/* Mostrar dropdown al pasar el mouse */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* 🔥 ESTO LO ARREGLA */
-}
-
-.navbar a {
-  color: white;
-  font-size: 15px; 
-  font-weight: 500;
-  text-decoration: none;
-}
-
-body {
-  margin: 0;
-  padding-top: 1000px; /* altura del navbar */
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }

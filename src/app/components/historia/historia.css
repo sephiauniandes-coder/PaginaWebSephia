@@ -1,0 +1,143 @@
+.historia-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+.historia-section {
+  margin-bottom: 50px;
+  animation: fadeUp 0.7s ease both;
+}
+
+.historia-section:nth-child(2) { animation-delay: 0.1s; }
+.historia-section:nth-child(3) { animation-delay: 0.2s; }
+.historia-section:nth-child(4) { animation-delay: 0.3s; }
+.historia-section:nth-child(5) { animation-delay: 0.4s; }
+.historia-section:nth-child(6) { animation-delay: 0.5s; }
+
+.historia-section h1 {
+  color: #262122;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.historia-section h2 {
+  color: #0E6100;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  display: inline-block;
+}
+
+.historia-section p {
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 14px;
+  color: #444;
+}
+
+/* Hero */
+.historia-hero {
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+.historia-hero img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Motivacion */
+.motivacion {
+  background: linear-gradient(135deg, #262122 0%, #1a1617 100%);
+  color: #f5f5f5;
+  padding: 50px 40px;
+  border-radius: 16px;
+}
+
+.motivacion h2 {
+  color: #0E6100;
+  border-bottom-color: #333;
+}
+
+.motivacion p {
+  color: #bbb;
+}
+
+.motivacion-img {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.motivacion-img img {
+  max-width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.motivacion-img img:hover {
+  transform: scale(1.02);
+}
+
+.img-caption {
+  font-size: 13px;
+  color: #777;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Galeria */
+.galeria h2 {
+  color: #0E6100;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  display: inline-block;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .historia-container {
+    padding: 40px 16px;
+  }
+
+  .historia-section h1 {
+    font-size: 30px;
+  }
+
+  .motivacion {
+    padding: 30px 20px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,136 @@
+/* ===== LIGHTBOX ===== */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: fadeIn 0.25s ease;
+}
+
+.lightbox-content {
+  max-width: 85vw;
+  max-height: 80vh;
+  cursor: default;
+  animation: lightboxZoom 0.3s ease;
+}
+
+@keyframes lightboxZoom {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.lightbox-content img {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10001;
+  padding: 8px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #ccc;
+  font-size: 26px;
+  padding: 16px 20px;
+  cursor: pointer;
+  z-index: 10001;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(14, 97, 0, 0.4);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10001;
+}
+
+.lightbox-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lightbox-dot.active {
+  background: #0E6100;
+  transform: scale(1.4);
+}
+
+.lightbox-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 26px;
+  right: 24px;
+  color: #666;
+  font-size: 13px;
+  z-index: 10001;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lightbox-content,
+  .lightbox-content img {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+
+  .lightbox-arrow {
+    font-size: 20px;
+    padding: 12px 14px;
+  }
+
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}

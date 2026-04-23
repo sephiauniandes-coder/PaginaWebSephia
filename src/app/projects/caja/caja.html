@@ -1,1 +1,45 @@
-<p>caja works!</p>
+<div class="proyecto-container">
+
+  <h1>Detección de Plagas</h1>
+
+  <div class="proyecto-hero">
+    <img src="assets/images/papa.jpg.jpeg" alt="Plantado de papas de control">
+  </div>
+
+  <section class="proyecto-descripcion">
+    <p>
+      Este proyecto es desarrollado en conjunto con tres estudiantes de electrónica, quienes deben diseñar un mecanismo de detección de chizas en cultivos de papa mediante el análisis de frecuencias de audio, complementado con una cámara que permite identificar el estado de las papas.
+    </p>
+  </section>
+
+  <section class="proyecto-avances">
+    <h2>Avances del proyecto</h2>
+    <ul>
+      <li>Plantado las papas de control</li>
+      <li>Trabajo con la cámara y el Raspberry Pi para la detección de plagas</li>
+      <li>Avance en el crecimiento de las papas</li>
+    </ul>
+  </section>
+
+  <section class="proyecto-galeria">
+    <div class="galeria-grid">
+      <img
+        *ngFor="let img of galeriaImages; let i = index"
+        [src]="img"
+        alt="Galería Detección de plagas"
+        (click)="openGaleria(i)"
+      >
+    </div>
+  </section>
+
+  <section class="proyecto-proximo">
+    <h2>Próximamente</h2>
+    <ul>
+      <li>Instalar el sistema con la cámara</li>
+      <li>Instalar el micrófono y giroscopio</li>
+      <li>Toma de datos</li>
+      <li>Análisis de datos</li>
+    </ul>
+  </section>
+
+</div>

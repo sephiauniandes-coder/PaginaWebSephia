@@ -41,3 +41,13 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Local docs (do not commit)
+/Información.pdf
+
+# Windows metadata artifacts
+*.Zone.Identifier
+*.pdf:Zone.Identifier
+
+# Local assistant metadata
+/.claude/.claude/

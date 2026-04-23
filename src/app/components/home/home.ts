@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements OnInit {
-
+export class Home implements OnInit, OnDestroy {
   images = [
     'assets/images/Agrocolia.png',
     'assets/images/Fertirriego.jpg',
@@ -16,6 +15,7 @@ export class Home implements OnInit {
   ];
 
   currentIndex = 0;
+  private intervalId: any;
 
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
@@ -26,9 +26,19 @@ export class Home implements OnInit {
       (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
+  goTo(index: number) {
+    this.currentIndex = index;
+  }
+
   ngOnInit() {
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.next();
     }, 5000);
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 }

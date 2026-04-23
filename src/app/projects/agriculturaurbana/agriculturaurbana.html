@@ -1,1 +1,41 @@
-<p>agriculturaurbana works!</p>
+<div class="proyecto-container">
+
+  <h1>Agricultura Urbana</h1>
+
+  <div class="proyecto-hero">
+    <img src="assets/images/urbana.png" alt="Sistema hidropónico de agricultura urbana">
+  </div>
+
+  <section class="proyecto-descripcion">
+    <p>
+      En agricultura urbana estamos trabajando con el diseño de sistemas hidropónicos adaptables a zonas urbanas. Se experimenta con diferentes tipos de sustratos que favorezcan el crecimiento de ciertas plantas y se busca reducir el gasto de agua mediante la implementación de filtros o sistemas de recirculación. Próximamente estaremos plantando fresas y albahaca.
+    </p>
+    <p>
+      Además de sistemas hidropónicos estamos trabajando con proyectos de agricultura de precisión con PLC, y automatización.
+    </p>
+  </section>
+
+  <section class="proyecto-avances">
+    <h2>Avances del proyecto</h2>
+    <ul>
+      <li>Trabajado en la configuración y programación del PLC</li>
+      <li>Configuración de la cámara remota del invernadero</li>
+      <li>Configurado el servidor para programar el PLC y la página web</li>
+      <li>Probar las bombas del invernadero</li>
+      <li>Compramos los materiales para empezar a armar el nuevo sistema hidropónico y plantar albahaca y fresas</li>
+    </ul>
+  </section>
+
+  <section class="proyecto-galeria">
+    <h2>Galería</h2>
+    <div class="galeria-grid">
+      <img
+        *ngFor="let img of galeriaImages; let i = index"
+        [src]="img"
+        alt="Galería Agricultura Urbana"
+        (click)="openGaleria(i)"
+      >
+    </div>
+  </section>
+
+</div>

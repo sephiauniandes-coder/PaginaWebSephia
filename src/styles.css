@@ -1,44 +1,318 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #262122;
+  background: #fafafa;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 0 30px;
+  height: 70px;
   background-color: #262122;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   color: #356026;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .logo img {
-  height: 40px;
+  height: 38px;
+  transition: transform 0.3s ease;
 }
 
-/* Links */
+.logo:hover img {
+  transform: scale(1.05);
+}
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+.nav-links li a,
+.nav-links > a {
   text-decoration: none;
-  color: #0E6100;
-  font-family: Helvetica, Arial, sans-serif;
-  transition: 0.3s;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  display: block;
 }
 
-.nav-links a:hover {
-  color: #356026;
+.nav-links li a:hover,
+.nav-links > a:hover {
+  color: #fff;
+  background-color: rgba(53, 96, 38, 0.3);
 }
-html {
-  scroll-behavior: smooth;
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e1a1b;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(8px);
+  transition: all 0.25s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #fff;
+  background-color: rgba(14, 97, 0, 0.2);
+  padding-left: 24px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ccc;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #1e1a1b;
+  color: #ffffff;
+  width: 100%;
+  padding: 60px 40px 30px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #0E6100;
+}
+
+.footer-section h4 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #356026;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-section p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-section a {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.footer-section a:hover {
+  color: #0E6100;
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #262122;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100dvh - 70px);
+    padding-top: 40px;
+    gap: 4px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.35s ease, opacity 0.2s ease;
+    overflow-y: auto;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-links li a,
+  .nav-links > a {
+    font-size: 18px;
+    padding: 14px 30px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    background: rgba(255,255,255,0.05);
+    box-shadow: none;
+    border-radius: 8px;
+    opacity: 1;
+    visibility: visible;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown.active .dropdown-menu {
+    max-height: 400px;
+    transform: none;
+  }
+
+  .dropdown > a {
+    cursor: pointer;
+  }
+
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+  }
 }

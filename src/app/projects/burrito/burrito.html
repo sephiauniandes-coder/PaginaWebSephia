@@ -1,1 +1,43 @@
-<p>burrito works!</p>
+<div class="proyecto-container">
+
+  <h1>Agrocolia (Burrito)</h1>
+
+  <div class="proyecto-hero">
+    <img src="assets/images/Agrocolia.png" alt="Proyecto Agrocolia - Rover Burrito">
+  </div>
+
+  <section class="proyecto-descripcion">
+    <p>
+      El proyecto de Agrocolia consiste en un rover alimentado con energía solar, diseñado para el monitoreo ambiental y la alerta temprana en cultivos colombianos (en este caso: maíz, yuca y frijol).
+    </p>
+    <p>
+      Desde SEPHIA estamos a cargo del diseño e implementación de la dinámica del sistema, incluyendo la sensórica, el control y los componentes mecánicos necesarios para su funcionamiento. Este proyecto se desarrolla en conjunto con EDS, un capítulo de la IEEE.
+    </p>
+  </section>
+
+  <section class="proyecto-colaboradores">
+    <h2>Colaboradores</h2>
+    <div class="colab-grid">
+      <div class="colab-item">
+        <img src="assets/images/Logoagrocolia1.png" alt="EDS Uniandes Chapter" class="colab-logo">
+        <p>EDS - Uniandes Chapter</p>
+      </div>
+      <div class="colab-item">
+        <img src="assets/images/agrocolia2.png" alt="IEEE Rama Estudiantil" class="colab-logo">
+        <p>IEEE Rama Estudiantil - Universidad de Los Andes</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proyecto-galeria">
+    <div class="galeria-grid">
+      <img
+        *ngFor="let img of galeriaImages; let i = index"
+        [src]="img"
+        alt="Galería Agrocolia"
+        (click)="openGaleria(i)"
+      >
+    </div>
+  </section>
+
+</div>
