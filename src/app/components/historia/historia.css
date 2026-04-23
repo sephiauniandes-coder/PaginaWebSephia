@@ -141,3 +141,224 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ════════════════════════════════════════════
+   HISTORIA — NUEVAS CLASES (estilo HCS)
+   Agregar al final del CSS existente.
+   No modifica ninguna clase ya definida.
+   ════════════════════════════════════════════ */
+
+/* ── Eyebrow labels ── */
+.hero-eyebrow,
+.section-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0E6100;
+  margin-bottom: 0.8rem;
+}
+
+.section-eyebrow.light {
+  color: #74c69d;
+}
+
+/* ── HERO BANNER ── */
+.historia-hero-banner {
+  background: #0d1f15;
+  border-radius: 16px;
+  padding: 4rem 3.5rem 3.5rem;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* grid pattern overlay, inspired by HCS binary bg */
+.historia-hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background-image:
+    radial-gradient(circle at 75% 50%, rgba(82,183,136,0.15) 0%, transparent 55%),
+    repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(45,106,79,0.08) 38px, rgba(45,106,79,0.08) 39px),
+    repeating-linear-gradient(90deg, transparent, transparent 38px, rgba(45,106,79,0.06) 38px, rgba(45,106,79,0.06) 39px);
+  pointer-events: none;
+}
+
+.historia-hero-banner h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem) !important;
+  color: #fff !important;
+  text-align: left !important;
+  position: relative;
+  z-index: 1;
+  line-height: 1.08;
+}
+
+.hero-accent {
+  color: #74c69d;
+}
+
+/* ── TAGLINE ── */
+.historia-tagline {
+  border-left: 4px solid #0E6100;
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+.historia-tagline p {
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem) !important;
+  font-weight: 600;
+  line-height: 1.55 !important;
+  color: #1a2e1f !important;
+  text-align: left !important;
+}
+
+.historia-tagline p strong {
+  color: #0E6100;
+  font-weight: 700;
+}
+
+/* ── SPLIT SECTIONS (Misión / Visión) ── */
+.historia-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0 !important;
+  margin-bottom: 2rem;
+}
+
+.historia-split.reverse {
+  direction: rtl;
+}
+.historia-split.reverse > * {
+  direction: ltr;
+}
+
+.split-visual {
+  background: #0d1f15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.split-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  filter: sepia(10%) brightness(0.9);
+}
+
+.split-visual.icon-only {
+  background: linear-gradient(135deg, #0d2b1a 0%, #1a4d2e 100%);
+}
+
+.split-icon {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.split-text {
+  background: #f8f5f0;
+  padding: 3rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-text h2 {
+  font-size: 1.9rem !important;
+  border-bottom: none !important;
+  margin-bottom: 1rem !important;
+  padding-bottom: 0 !important;
+}
+
+.split-text p {
+  text-align: left !important;
+}
+
+/* ── HISTORIA CARDS ── */
+.historia-cards-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 3rem 2.8rem !important;
+}
+
+.historia-cards-section h2 {
+  font-size: 1.9rem;
+}
+
+.historia-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.historia-card {
+  border-top: 3px solid #74c69d;
+  padding-top: 1.2rem;
+}
+
+.historia-card p {
+  font-size: 0.95rem !important;
+  text-align: left !important;
+  color: #3a5040 !important;
+}
+
+/* ── MOTIVACIÓN — layout 2 columnas ── */
+/* Aprovecha las clases .motivacion ya existentes */
+.motivacion-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.motivacion-text h2 {
+  font-size: 1.9rem !important;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .historia-hero-banner {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .historia-split {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .historia-split.reverse {
+    direction: ltr;
+  }
+
+  .split-visual {
+    min-height: 200px;
+  }
+
+  .split-text {
+    padding: 2rem 1.5rem;
+  }
+
+  .historia-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .motivacion-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .historia-cards-section {
+    padding: 2rem 1.2rem !important;
+  }
+}
+
